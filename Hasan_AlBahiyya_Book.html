@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حَسَنُ البَهِيَّة </title>
+    <link rel="icon" href="./q.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Amiri', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .cover {
+            background: linear-gradient(135deg, #1f3f7f 0%, #2c5aa0 100%);
+            color: #fff;
+            padding: 80px 40px;
+            text-align: center;
+            border-bottom: 8px solid #d4af37;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cover-overlay {
+            background: rgba(0, 31, 63, 0.85);
+            padding: 50px;
+            border-radius: 15px;
+            border: 3px solid #d4af37;
+            max-width: 600px;
+        }
+        
+        .cover h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+        
+        .cover p {
+            font-size: 20px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        
+        .cover hr {
+            width: 50%;
+            border: 2px solid #d4af37;
+            margin: 20px auto;
+        }
+        
+        .cover .subtitle {
+            font-size: 16px;
+            color: #e8e8e8;
+            margin: 20px 0;
+        }
+        
+        .cover .author {
+            margin-top: 80px;
+            font-size: 14px;
+            color: #d4af37;
+        }
+        
+        .content {
+            padding: 60px 50px;
+        }
+        
+        .section-title {
+            color: #1a5276;
+            border-bottom: 4px solid #d4af37;
+            padding-bottom: 15px;
+            margin: 60px 0 30px 0;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .content h2 {
+            color: #d35400;
+            margin: 40px 0 20px 0;
+            border-right: 6px solid #d35400;
+            padding-right: 15px;
+            font-size: 24px;
+        }
+        
+        .content h3 {
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            font-size: 18px;
+        }
+        
+        .content p {
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+        
+        .intro-box {
+            background-color: #fdf2e9;
+            padding: 25px;
+            border-right: 6px solid #e67e22;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #1a5276;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .example {
+            color: #1e8449;
+            font-weight: bold;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+        
+        li {
+            margin: 12px 0;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .conclusion {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            border: 2px solid #1a5276;
+        }
+        
+        .conclusion p {
+            font-size: 16px;
+            margin: 15px 0;
+            color: #1a5276;
+        }
+        
+        .highlight {
+            background-color: #ffffcc;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        .toc {
+            background-color: #f5f5f5;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 6px solid #d4af37;
+            border-radius: 5px;
+        }
+        
+        .toc h3 {
+            color: #1a5276;
+            margin-bottom: 20px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .toc li {
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        
+        .toc li:last-child {
+            border-bottom: none;
+        }
+        
+        .toc a {
+            color: #d35400;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: #1a5276;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+        
+        .navbar {
+            background-color: #1a5276;
+            color: #fff;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .navbar h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .print-btn {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 20px;
+            font-family: 'Amiri', serif;
+        }
+        
+        .print-btn:hover {
+            background-color: #c0390b;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .cover {
+                padding: 40px 20px;
+                min-height: 400px;
+            }
+            
+            .cover h1 {
+                font-size: 36px;
+            }
+            
+            .cover p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .content h2 {
+                font-size: 20px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .navbar {
+                display: none;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+            
+            .section-title {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h4>📚 حَسَنُ البَهِيَّة - كتاب التجويد الشامل</h4>
+    </div>
+    
+    <div class="container">
+        <!-- الغلاف -->
+        <div class="cover">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- غلاف الكتاب -->
+                    <rect x="20" y="15" width="80" height="90" fill="#d4af37" stroke="#fff" stroke-width="2" rx="5"/>
+                    <rect x="25" y="20" width="70" height="80" fill="#1a5276" rx="3"/>
+                    <!-- خطوط الكتاب -->
+                    <line x1="30" y1="30" x2="90" y2="30" stroke="#d4af37" stroke-width="2"/>
+                    <line x1="30" y1="40" x2="90" y2="40" stroke="#fff" stroke-width="1.5"/>
+                    <line x1="30" y1="50" x2="90" y2="50" stroke="#fff" stroke-width="1.5"/>
+                    <line x1="30" y1="60" x2="90" y2="60" stroke="#fff" stroke-width="1.5"/>
+                    <line x1="30" y1="70" x2="90" y2="70" stroke="#fff" stroke-width="1.5"/>
+                    <line x1="30" y1="80" x2="90" y2="80" stroke="#fff" stroke-width="1.5"/>
+                    <line x1="30" y1="90" x2="90" y2="90" stroke="#d4af37" stroke-width="2"/>
+                    <!-- عنوان الكتاب في الصورة -->
+                    <text x="60" y="55" text-anchor="middle" fill="#d4af37" font-size="8" font-weight="bold" font-family="Arial">القرآن</text>
+                </svg>
+            </div>
+            <div class="cover-overlay">
+                <h1>حَسَنُ البَهِيَّة</h1>
+                <p>فِي أحْكَامِ القُرآنِ النَّظَرِيَّة</p>
+                <hr>
+                <p class="subtitle">دليل شامل في علوم التجويد وآداب التلاوة</p>
+                <div class="author">
+                    كَتَبَهُ<br>
+                    <b>عبد الكريم بن ايمن نوفل</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- جدول المحتويات -->
+            <div class="toc">
+                <h3>📑 جدول المحتويات</h3>
+                <ul>
+                    <li><a href="#intro">المقدمة</a></li>
+                    <li><a href="#ch1">الباب الأول: مبادئ علم التجويد</a></li>
+                    <li><a href="#ch2">الباب الثاني: أحكام النون الساكنة والتنوين</a></li>
+                    <li><a href="#ch3">الباب الثالث: أحكام المدود</a></li>
+                    <li><a href="#ch4">الباب الرابع: مخارج الحروف وصفاتها</a></li>
+                    <li><a href="#ch5">الباب الخامس: أحكام الوقف والابتداء</a></li>
+                    <li><a href="#conclusion">الخاتمة</a></li>
+                </ul>
+            </div>
+
+            <!-- المقدمة -->
+            <div id="intro" class="section-title">المقدمة</div>
+            <p>
+                الحمد لله الذي أنزل على عبده الكتاب ولم يجعل له عوجاً، والصلاة والسلام على نبينا محمد الذي أوتي جوامع الكلم، وعلى آله وصحبه ومن تبعهم بإحسان إلى يوم الدين.
+            </p>
+            <p>
+                إن تلاوة القرآن الكريم ليست مجرد قراءة للحروف، بل هي عبادة تتطلب الدقة والخشوع، وقد أمرنا الله تعالى بترتيله فقال: <b>"وَرَتِّلِ الْقُرْآنَ تَرْتِيلاً"</b> (سورة المزمل: 4). ومن هنا نشأ علم التجويد ليكون الضابط والقالب الذي يحفظ لسان القارئ من اللحن والخطأ.
+            </p>
+            <p>
+                يأتي كتاب <b>"حَسَنُ البَهِيَّة"</b> ليكون مرجعاً نظرياً شاملاً، يستعرض الأحكام بأسلوب عصري يجمع بين القواعد الأصيلة والشرح المبسط، مستهدفاً طالب العلم الذي يسعى لإتقان كتاب الله تعالى. وهذا الكتاب يعتبر مقدمة أساسية لكل من يرغب في فهم أحكام التجويد وتطبيقها عملياً.
+            </p>
+
+            <!-- الباب الأول -->
+            <div id="ch1" class="section-title">الباب الأول: مبادئ علم التجويد</div>
+            
+            <h2>أولاً: تعريف علم التجويد</h2>
+            <p><b>لغة:</b> التجويد مشتق من الجودة، يقال جودت الشيء أي حسنته وأتقنته.</p>
+            <p>
+                <b>اصطلاحاً:</b> هو إعطاء كل حرف حقه (من المخارج والصفات اللازمة) ومستحقه (من الأحكام العارضة كالمد والقصر، والإدغام والإظهار).
+            </p>
+            
+            <h2>ثانياً: حكم العمل به</h2>
+            <p>
+                العمل بالتجويد فرض عين على كل مسلم ومسلمة يقرأ القرآن الكريم، لقوله تعالى: <b>"وَرَتِّلِ الْقُرْآنَ تَرْتِيلاً"</b>. أما تعلم القواعد النظرية والأحكام التفصيلية فهو فرض كفاية على الأمة الإسلامية.
+            </p>
+
+            <!-- الباب الثاني -->
+            <div id="ch2" class="section-title">الباب الثاني: أحكام النون الساكنة والتنوين</div>
+            <p>
+                للنون الساكنة والتنوين أربعة أحكام أساسية بناءً على الحرف الذي يليهما في الكلمة. وهذا من أهم أحكام التجويد التي يجب على القارئ إتقانها:
+            </p>
+            <table>
+                <tr>
+                    <th>الحكم</th>
+                    <th>التعريف</th>
+                    <th>حروفه</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td><b>الإظهار الحلقي</b></td>
+                    <td>إخراج الحرف من مخرجه بدون غنة ظاهرة</td>
+                    <td>ء، هـ، ع، ح، غ، خ</td>
+                    <td><span class="example">مِنْ أهْلِ</span></td>
+                </tr>
+                <tr>
+                    <td><b>الإدغام</b></td>
+                    <td>إدخال حرف ساكن في متحرك بحيث يصيران حرفاً مشدداً</td>
+                    <td>ي، ر، م، ل، و، ن (يرملون)</td>
+                    <td><span class="example">مَنْ يَقُول</span></td>
+                </tr>
+                <tr>
+                    <td><b>الإقلاب</b></td>
+                    <td>قلب النون الساكنة أو التنوين ميماً مخفاة</td>
+                    <td>ب فقط</td>
+                    <td><span class="example">مِنْ بَعْدِ</span></td>
+                </tr>
+                <tr>
+                    <td><b>الإخفاء الحقيقي</b></td>
+                    <td>النطق بالحرف بصفة بين الإظهار والإدغام</td>
+                    <td>15 حرفاً (الباقي)</td>
+                    <td><span class="example">مِنْ دُونِ</span></td>
+                </tr>
+            </table>
+
+            <!-- الباب الثالث -->
+            <div id="ch3" class="section-title">الباب الثالث: أحكام المدود</div>
+            <p>
+                المد هو إطالة الصوت بحرف من حروف المد الثلاثة (الألف، الواو، الياء). وينقسم إلى نوعين أساسيين:
+            </p>
+            
+            <h3>1. المد الأصلي (الطبيعي)</h3>
+            <p>
+                هو الذي لا تقوم ذات الحرف إلا به، ولا يتوقف على سبب خارج، ويمد بمقدار حركتين فقط. 
+                أمثلة: <span class="example">قَال، يَقُول، قِيل</span>.
+            </p>
+            
+            <h3>2. المد الفرعي (الزائد)</h3>
+            <p>
+                هو المد الزائد على الطبيعي بسبب همز أو سكون. ومن أهم أنواعه:
+            </p>
+            <ul>
+                <li><b>المد الواجب المتصل:</b> أن يقع الهمز بعد حرف المد في كلمة واحدة. مثال: <span class="example">السَّماء</span>. ويمد 4-5 حركات.</li>
+                <li><b>المد الجائز المنفصل:</b> أن يكون حرف المد في آخر كلمة والهمز في بداية الكلمة التالية. مثال: <span class="example">إِنَّ الَّذِي آمَنَ</span>. ويمد 2-4-5 حركات.</li>
+                <li><b>المد اللازم:</b> أن يأتي سكون أصلي بعد حرف المد. مثال: <span class="example">الصَّاخَّة</span>. ويمد 6 حركات لزوماً.</li>
+                <li><b>مد الصلة الصغرى والكبرى:</b> خاص بالهاء الضمير عند وقوع حرف مد قبلها.</li>
+            </ul>
+
+            <!-- الباب الرابع -->
+            <div id="ch4" class="section-title">الباب الرابع: مخارج الحروف وصفاتها</div>
+            
+            <h2>مخارج الحروف العامة</h2>
+            <p>
+                المخارج هي الأماكن والمواضع التي يخرج منها الحرف عند النطق به. وقد اتفق العلماء على خمسة مخارج عامة تنبثق منها مخارج تفصيلية:
+            </p>
+            <ol>
+                <li><b>الجوف:</b> وهو الفراغ الداخلي للفم والحلق. يخرج منه حروف المد الثلاثة (الألف، الواو، الياء) في حالة عدم المد.</li>
+                <li><b>الحلق:</b> وينقسم إلى ثلاثة أقسام يخرج منها ستة حروف: الهمزة والهاء (من أقصى الحلق)، العين والحاء (من وسط الحلق)، الغين والخاء (من أدنى الحلق).</li>
+                <li><b>اللسان:</b> وهو أكبر المخارج وأكثرها عدداً. يخرج منه ثمانية عشر حرفاً موزعة على عشرة مخارج تفصيلية.</li>
+                <li><b>الشفتان:</b> وفيهما مخرجان لأربعة حروف (الفاء من باطن الشفة السفلى وأطراف الثنايا العليا، الباء والميم من باطن الشفتين، الواو غير المدية من ملتقى الشفتين).</li>
+                <li><b>الخيشوم:</b> وهو خرق الأنف المنجذب للداخل، ويخرج منه حرف الغنة (الصفة لا الحرف).</li>
+            </ol>
+
+            <h2>صفات الحروف</h2>
+            <p>
+                الصفات هي كيفيات تطرأ على الحروف عند نطقها. وتنقسم إلى صفات لها ضد (كالجهر والهمس) وصفات لا ضد لها. معرفة الصفات ضروري لإتقان التجويد والنطق السليم.
+            </p>
+
+            <!-- الباب الخامس -->
+            <div id="ch5" class="section-title">الباب الخامس: أحكام الوقف والابتداء</div>
+            <p>
+                قال علي بن أبي طالب رضي الله عنه: <b>"الترتيل هو تجويد الحروف ومعرفة الوقوف"</b>. والوقف والابتداء من المسائل المهمة التي تؤثر على فهم معاني القرآن الكريم.
+            </p>
+            
+            <h3>أنواع الوقف:</h3>
+            <ul>
+                <li><b>الوقف التام:</b> الوقف على كلام تم معناه تماماً ولم يتعلق بما بعده لا لفظاً ولا معنى. يحسن الوقف عليه والابتداء بما بعده.</li>
+                <li><b>الوقف الكافي:</b> الوقف على كلام تم معناه في ذاته لكنه متعلق بما بعده في المعنى من جهة السبب والجزاء.</li>
+                <li><b>الوقف الحسن:</b> الوقف على كلام له معنى تام لكنه متعلق بما بعده لفظاً ومعنى معاً.</li>
+                <li><b>الوقف القبيح:</b> الوقف على ما لا يؤدي معنى تاماً أو يؤدي معنى خاطئاً يخالف مراد الآية.</li>
+            </ul>
+            
+            <h3>علامات الوقف في المصحف:</h3>
+            <ul>
+                <li><b>ۋ</b> (الوقف المطلق): يشير إلى وقف جائز.</li>
+                <li><b>۸</b> (لا توصل): يشير إلى عدم جواز وصل ما بعده بما قبله.</li>
+                <li><b>ج</b> (الوقف الجائز): يشير إلى جواز الوقف عليه.</li>
+            </ul>
+
+            <!-- الخاتمة -->
+            <div id="conclusion" class="section-title">الخاتمة</div>
+            <div class="conclusion">
+                <p>
+                    ختاماً، إن هذا الكتاب <b>"حَسَنُ البَهِيَّة"</b> ما هو إلا مدخل نظري لهذا العلم الشريف، والقاعدة الذهبية الأساسية في التجويد هي التلقي والمشافهة على أيدي المقرئين المتقنين الثقات. فالقرآن الكريم لا يؤخذ إلا بالتلقي والمباشرة، كما أخذه الصحابة الكرام من رسول الله صلى الله عليه وسلم.
+                </p>
+                <p>
+                    نسأل الله العلي القدير أن يجعلنا وإياكم من أهل القرآن الذين هم أهل الله وخاصته، وأن يرزقنا تلاوة سليمة وفهماً صحيحاً لكتابه الكريم، وأن ينفع بهذا الكتاب كل من قرأه طالباً للعلم النافع.
+                </p>
+                <p style="margin-top: 30px; font-size: 18px;">
+                    <b>تم الكتاب بحمد الله وتوفيقه</b><br>
+                    <b style="font-size: 16px;">والحمد لله رب العالمين</b>
+                </p>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">🖨️ طباعة الكتاب</button>
+        </div>
+
+        <!-- التذييل -->
+        <footer>
+            <p><b>حَسَنُ البَهِيَّة في أحْكَامِ القُرآنِ النَّظَرِيَّة</b></p>
+            <p style="font-size: 14px; margin-top: 10px;">إعداد: عبد الكريم بن ايمن نوفل</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.8;">© جميع الحقوق محفوظة | النسخة الإلكترونية</p>
+        </footer>
+    </div>
+</body>
+</html>
